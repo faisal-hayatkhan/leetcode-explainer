@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #ffa116; /* LeetCode Orange */
+  --primary-hover-color: #ffc071;
+  --secondary-color: #3498db;
+  --secondary-hover-color: #5dade2;
+  --background-start-color: #282c34;
+  --background-end-color: #1e222a;
+  --font-color: #abb2bf;
+  --card-background-color: rgba(30, 34, 42, 0.7);
+  --border-color: rgba(255, 161, 22, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --input-background-color: rgba(40, 44, 52, 0.8);
+  --success-color: #2ecc71;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  min-width: 520px;
+  padding: 20px;
+  color: var(--font-color);
+  background: linear-gradient(135deg, var(--background-start-color), var(--background-end-color));
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.card {
+  background: var(--card-background-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  padding: 25px;
+  box-shadow: 0 8px 32px 0 var(--shadow-color);
+}
+
+h1, h2 {
+  color: #fff;
+  margin-top: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  color: #1e222a;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+#summarize {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-hover-color));
+}
+
+#copy-btn {
+  background: linear-gradient(45deg, var(--secondary-color), var(--secondary-hover-color));
+  color: white;
+}
+
+.options {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#summary-type,
+input[type="text"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+  flex-grow: 1;
+  background-color: var(--input-background-color);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-color);
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 161, 22, 0.3);
+}
+
+#result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(40, 44, 52, 0.7);
+  min-height: 150px;
+  max-height: 350px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #d1d5db;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+#result::-webkit-scrollbar {
+  width: 8px;
+}
+
+#result::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+#result::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.loading { display: flex; justify-content: center; align-items: center; height: 150px; }
+.loader { width: 50px; height: 50px; border-radius: 50%; display: inline-block; border-top: 4px solid var(--primary-color); border-right: 4px solid transparent; box-sizing: border-box; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.form-group { flex-direction: column; align-items: flex-start; }
+label { margin-bottom: 8px; font-weight: 500; font-size: 15px; color: #fff; }
+.form-group p { font-size: 13px; color: var(--font-color); margin: 5px 0 0 0; }
+a { color: var(--primary-color); font-weight: 500; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.success-message { color: white; background-color: var(--success-color); padding: 12px 15px; border-radius: 8px; margin-top: 20px; display: none; text-align: center; font-weight: 500; box-shadow: 0 4px 6px rgba(45, 206, 137, 0.2); }
+
+.result-heading {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 12px;
+  margin-bottom: 4px;
+}

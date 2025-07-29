@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Problem Explainer",
+  "version": "1.1",
+  "description": "Uses AI to explain LeetCode problems in simple terms, break them down, or provide analogies.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://leetcode.com/problems/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html"
+}
